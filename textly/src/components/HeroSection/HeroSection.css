@@ -77,24 +77,24 @@
 .cta-button.primary {
   background: linear-gradient(to right, #2563eb, #7c3aed);
   color: white;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+  
 }
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.5);
+  
 }
 
 .cta-button.secondary {
   background-color: #111827;
   color: white;
-  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.4);
+  
 }
 
 .cta-button.secondary:hover {
   background-color: #1f2937;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 24, 39, 0.5);
+ 
 }
 
 .button-icon {
