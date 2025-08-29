@@ -1,0 +1,129 @@
+/* src/components/FeaturesSection/FeaturesAnimation.css */
+.features-animation-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.animation-window {
+  background-color: white;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #e1e5e9;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.control-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control-dot.red {
+  background-color: #ff5f56;
+}
+
+.control-dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.control-dot.green {
+  background-color: #27c93f;
+}
+
+.text-display {
+  background-color: #f9fafb;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.typed-text {
+  color: #111827;
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.correction-bubble {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  right: 30px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 12px;
+  padding: 16px;
+  transform: translateY(-100%);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.correction-bubble:hover {
+  transform: translateY(-100%) scale(1.02);
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.correction-bubble.applying {
+  animation: applyCorrection 0.8s ease forwards;
+}
+
+@keyframes applyCorrection {
+  0% {
+    transform: translateY(-100%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-80%) scale(0.95);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(20%) scale(0);
+    opacity: 0;
+  }
+}
+
+.correction-text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.bubble-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+  transform: translateY(100%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #2563eb;
+}
+
+.click-hint {
+  font-size: 12px;
+  opacity: 0.8;
+  font-style: italic;
+}

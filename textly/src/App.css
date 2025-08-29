@@ -1,0 +1,7 @@
+/* src/App.css */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffffff 0%, #e0f2ff 50%, #f3e8ff 100%);
+  position: relative;
+  overflow: hidden;
+}
