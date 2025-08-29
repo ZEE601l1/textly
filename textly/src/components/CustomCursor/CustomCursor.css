@@ -1,0 +1,355 @@
+/* src/components/CustomCursor/CustomCursor.css */
+
+/* Hide default cursor */
+* {
+  cursor: none !important;
+}
+
+/* Main cursor container */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Inner cursor with gradient */
+.cursor-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(45deg, #2563eb, #7c3aed, #ec4899);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+  box-shadow: 
+    0 0 25px rgba(37, 99, 235, 0.4),
+    0 0 50px rgba(37, 99, 235, 0.2);
+  transition: all 0.2s ease;
+}
+
+/* Central dot */
+.cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: white;
+  opacity: 0.9;
+}
+
+/* Outer rotating ring */
+.cursor-outer-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top: 3px solid rgba(37, 99, 235, 0.6);
+  border-right: 3px solid rgba(124, 58, 237, 0.4);
+  animation: spin 4s linear infinite;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Hover state - pointer */
+.cursor-pointer {
+  width: 64px;
+  height: 64px;
+}
+
+.cursor-pointer .cursor-inner {
+  width: 18px;
+  height: 18px;
+  box-shadow: 
+    0 0 35px rgba(37, 99, 235, 0.6),
+    0 0 70px rgba(37, 99, 235, 0.3),
+    0 0 105px rgba(37, 99, 235, 0.1);
+}
+
+.cursor-pointer .cursor-outer-ring {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+  animation: spin 2s linear infinite, pulse 2s ease-in-out infinite;
+}
+
+/* Pressed state */
+.cursor-pressed {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.cursor-pressed .cursor-inner {
+  background: linear-gradient(45deg, #dc2626, #ea580c, #d97706);
+  box-shadow: 
+    0 0 25px rgba(220, 38, 38, 0.6),
+    0 0 50px rgba(220, 38, 38, 0.3);
+}
+
+/* Hidden state */
+.cursor-hidden {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* Trail effects */
+.cursor-trail {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+  pointer-events: none;
+  z-index: 9999;
+  transition: opacity 0.2s ease;
+  animation: trailFade 0.8s ease-out forwards;
+}
+
+/* Particles for hover effect */
+.cursor-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.8);
+  pointer-events: none;
+  animation: particleFloat 2s ease-in-out infinite;
+}
+
+.particle-1 {
+  top: -12px;
+  left: -12px;
+  animation-delay: 0s;
+  background: rgba(37, 99, 235, 0.6);
+}
+
+.particle-2 {
+  top: -12px;
+  right: -12px;
+  animation-delay: 0.5s;
+  background: rgba(124, 58, 237, 0.6);
+}
+
+.particle-3 {
+  bottom: -12px;
+  left: -12px;
+  animation-delay: 1s;
+  background: rgba(236, 72, 153, 0.6);
+}
+
+.particle-4 {
+  bottom: -12px;
+  right: -12px;
+  animation-delay: 1.5s;
+  background: rgba(37, 99, 235, 0.6);
+}
+
+/* Click ripple effect */
+.cursor-ripple {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(37, 99, 235, 0.8);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  animation: rippleExpand 0.8s ease-out forwards;
+}
+
+/* Keyframe animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(3px, -3px) scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-3px, 3px) scale(0.8);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(-3px, -3px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes rippleExpand {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 1;
+  }
+  100% {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Text selection effects */
+.cursor-text {
+  width: 2px;
+  height: 20px;
+  border-radius: 1px;
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  animation: textBlink 1s ease-in-out infinite alternate;
+}
+
+.cursor-text .cursor-inner {
+  display: none;
+}
+
+.cursor-text .cursor-outer-ring {
+  display: none;
+}
+
+@keyframes textBlink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Magnetic effect for interactive elements */
+.cursor-magnetic {
+  transform: translate(-50%, -50%) scale(1.5);
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.cursor-magnetic .cursor-inner {
+  animation: magneticPulse 0.6s ease infinite alternate;
+}
+
+@keyframes magneticPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.3);
+  }
+}
+
+/* Special effects for different elements */
+.cursor-image {
+  width: 60px;
+  height: 60px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 3px solid rgba(37, 99, 235, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.cursor-image .cursor-inner {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #2563eb, #7c3aed);
+}
+
+.cursor-image .cursor-outer-ring {
+  width: 45px;
+  height: 45px;
+  border: 2px dashed rgba(37, 99, 235, 0.5);
+  animation: spin 3s linear infinite reverse;
+}
+
+/* Loading state */
+.cursor-loading {
+  animation: loadingPulse 1s ease-in-out infinite;
+}
+
+.cursor-loading .cursor-outer-ring {
+  border-top: 3px solid #2563eb;
+  border-right: 3px solid #7c3aed;
+  border-bottom: 3px solid #ec4899;
+  border-left: 3px solid transparent;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Disable on mobile devices */
+@media (max-width: 768px), (hover: none) {
+  .cursor,
+  .cursor-trail,
+  .cursor-ripple {
+    display: none !important;
+  }
+}
+
+/* Disable for touch devices */
+@media (pointer: coarse) {
+  .cursor,
+  .cursor-trail,
+  .cursor-ripple {
+    display: none !important;
+  }
+}

@@ -1,0 +1,133 @@
+/* src/components/HowItWorks/HowItWorks.css */
+.how-it-works-section {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 1.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.how-it-works-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.section-title.centered {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5rem;
+  background: linear-gradient(to right, #111827, #1e40af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.steps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.step-card {
+  padding: 2.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover .step-number {
+  transform: scale(1.1);
+}
+
+.step-number.blue {
+  background: linear-gradient(to bottom right, #3b82f6, #8b5cf6);
+}
+
+.step-number.green {
+  background: linear-gradient(to bottom right, #10b981, #06b6d4);
+}
+
+.step-number.purple {
+  background: linear-gradient(to bottom right, #8b5cf6, #ec4899);
+}
+
+.step-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.step-description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .section-title.centered {
+    font-size: 3.5rem;
+  }
+  
+  .steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 3rem;
+  }
+  
+  .step-1 {
+    justify-self: start;
+    width: 80%;
+  }
+  
+  .step-2 {
+    justify-self: end;
+    width: 80%;
+  }
+  
+  .step-3 {
+    justify-self: center;
+    width: 80%;
+  }
+  
+  .step-number {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .step-1 .step-number {
+    margin-right: auto;
+  }
+  
+  .step-2 .step-number {
+    margin-left: auto;
+  }
+  
+  .step-3 .step-number {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

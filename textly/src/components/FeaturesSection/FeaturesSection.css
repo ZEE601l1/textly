@@ -1,0 +1,163 @@
+/* src/components/FeaturesSection/FeaturesSection.css */
+.features-section {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 1.5rem;
+}
+
+.features-container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.features-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 5rem;
+}
+
+.features-animation-container {
+  order: 1;
+}
+
+.features-content {
+  order: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #111827, #1e40af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.features-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.feature-card {
+  padding: 2.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.05);
+}
+
+.feature-icon.blue {
+  background: linear-gradient(to bottom right, #3b82f6, #8b5cf6);
+}
+
+.feature-icon.green {
+  background: linear-gradient(to bottom right, #10b981, #06b6d4);
+}
+
+.feature-icon.purple {
+  background: linear-gradient(to bottom right, #8b5cf6, #ec4899);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .features-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+  }
+  
+  .features-animation-container {
+    flex: 1;
+    order: 1;
+  }
+  
+  .features-content {
+    flex: 1;
+    order: 2;
+  }
+  
+  .section-title {
+    font-size: 3.5rem;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 2.5rem;
+  }
+  
+  .feature-1 {
+    justify-self: end;
+    width: 80%;
+  }
+  
+  .feature-2 {
+    justify-self: start;
+    width: 80%;
+  }
+  
+  .feature-3 {
+    justify-self: center;
+    width: 80%;
+  }
+  
+  .feature-icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .feature-1 .feature-icon {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .feature-2 .feature-icon {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
