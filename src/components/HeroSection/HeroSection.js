@@ -11,12 +11,12 @@ const HeroSection = () => {
         {/* Mobile Layout */}
         <div className="mobile-layout">
           <h1 className="hero-title">
-            <span className="title-line-1">Imagine you can just write,</span>
+            <span className="title-line-1">Imagine you can just write</span>
             <span className="title-line-2">and not worry</span>
           </h1>
           
           <p className="hero-description">
-            Textly goes beyond spelling fixes, it understands context, slang, and style while you type.
+           With Textly’s in-keyboard AI you get smart assistance instantly. Just type “hey textly”, and the AI pops up right above your keyboard ready to help you out.
           </p>
           
           {/* Live Typing Demo */}
@@ -39,12 +39,12 @@ const HeroSection = () => {
         <div className="desktop-layout">
           <div className="hero-content">
             <h1 className="hero-title">
-              <span className="title-line-1">Imagine you can just text,</span>
+              <span className="title-line-1">Imagine you can just write</span>
               <span className="title-line-2">and not worry</span>
             </h1>
             
             <p className="hero-description">
-              Textly goes beyond spelling fixes, it understands context, slang, and style while you type.
+              With Textly’s in-keyboard AI you get smart assistance instantly. Just type “hey textly”, and the AI pops up right above your keyboard ready to help you out.
             </p>
             
             <div className="cta-buttons">

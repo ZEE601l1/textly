@@ -10,21 +10,32 @@ const FeaturesAnimation = () => {
   const animationRef = useRef(null);
   
   const demoSteps = [
-    { 
-      text: "Im going too the store tommorow", 
-      correction: "I'm going to the store tomorrow",
-      preserve: ["Im", "tommorow"]
-    },
-    { 
-      text: "That party was lit fr no cap", 
-      correction: "That party was lit fr no cap",
-      preserve: ["lit", "fr", "no cap"]
-    },
-    { 
-      text: "Its time for the meeting", 
-      correction: "It's time for the meeting",
-      preserve: []
-    }
+{ 
+  text: "Im defo going too the store tommorow after skool cuz I gotta grab some snackz fr, then we chillin at mikes house l8r.", 
+  correction: "I'm defo going to the store tomorrow after school cuz I gotta grab some snacks fr, then we're chilling at Mike's house l8r.", 
+  preserve: ["Im", "tommorow", "fr", "no cap", "snackz", "l8r", "cuz", "defo"]
+},
+{ 
+  text: "Bruh that party last nite was mad crazy ong, ppl was dancing off beat smh but it was still lit af fr.", 
+  correction: "Bruh, that party last night was mad crazy ong. People were dancing off beat smh, but it was still lit af fr.", 
+  preserve: ["Bruh", "ong", "smh", "lit", "af", "fr", "nite", "ppl"]
+},
+{ 
+  text: "Its time for the meeting rn but idk if I shud even go cuz Im lowkey tired af nd my head hurtin.", 
+  correction: "It's time for the meeting rn, but idk if I should even go cuz I'm lowkey tired af and my head hurting.", 
+  preserve: ["rn", "idk", "cuz", "Im", "lowkey", "af", "nd", "shud"]
+},
+{ 
+  text: "She was like omg I cant believe u actually said dat in class bruh, teacher was starin lowkey sus.", 
+  correction: "She was like omg, I can't believe u actually said dat in class bruh. The teacher was staring lowkey sus.", 
+  preserve: ["omg", "u", "dat", "bruh", "lowkey", "sus"]
+},
+{ 
+  text: "We finna pul up 2 the mall l8r, u down? Bet we grab food n jus vibe dere til its dark.", 
+  correction: "We finna pull up to the mall l8r, u down? Bet we grab food and jus vibe dere till it's dark.", 
+  preserve: ["finna", "l8r", "u", "Bet", "jus", "dere", "2"]
+}
+
   ];
   
   useEffect(() => {
@@ -52,13 +63,13 @@ const FeaturesAnimation = () => {
       
       // Wait before applying correction
       await new Promise(resolve => {
-        animationRef.current = setTimeout(resolve, 2000);
+        animationRef.current = setTimeout(resolve, 10000);
       });
       
       // Apply correction
       setIsCorrecting(true);
       await new Promise(resolve => {
-        animationRef.current = setTimeout(resolve, 500);
+        animationRef.current = setTimeout(resolve, 1000);
       });
       
       // Apply correction instantly
@@ -66,7 +77,7 @@ const FeaturesAnimation = () => {
       
       // Reset states
       await new Promise(resolve => {
-        animationRef.current = setTimeout(resolve, 1500);
+        animationRef.current = setTimeout(resolve, 5000);
       });
       setShowCorrection(false);
       setIsCorrecting(false);
@@ -117,7 +128,7 @@ const FeaturesAnimation = () => {
               {demoSteps[currentStep].correction}
             </div>
             <div className="bubble-arrow"></div>
-            <div className="click-hint">Click to apply</div>
+            <div className="click-hint">Click to apply correction</div>
           </div>
         )}
       </div>

@@ -14,10 +14,10 @@ const FeaturesSection = () => {
           </div>
           <div className="features-content">
             <h2 className="section-title">
-              Smart Corrections That Understand Context
+              Get Smart Corrections That Understand Context
             </h2>
             <p className="section-description">
-              Textly intelligently corrects your spelling and grammar while preserving your intended meaning and style.
+              Textly intelligently corrects your spelling and grammar while preserving your intended meaning and style so it feels like your work, just enhanced.
             </p>
             <p className="section-description">
               Whether you're using slang, technical terms, or casual language, Textly gets the context and makes appropriate corrections.
