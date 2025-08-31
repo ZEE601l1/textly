@@ -28,7 +28,7 @@ const HeroAnimation = () => {
                 <div className="message-avatar">T</div>
                 <div className="message-content">
                   <div className="message-sender">Textly</div>
-                  <div className="message-text">Hey there, how can I help you today?</div>
+                  <div className="message-text">Hey there, scroll down to see more about Textly</div>
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const HeroAnimation = () => {
             type="text"
             value={inputValue}
             onChange={handleInputChange}
-            placeholder="Type 'Hey Textly' to start chatting..."
+            placeholder="Type 'Hey Textly' to see the magic..."
             className="user-input"
           />
         </div>
