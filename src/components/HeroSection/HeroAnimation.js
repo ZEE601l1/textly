@@ -28,7 +28,7 @@ const HeroAnimation = () => {
                 <div className="message-avatar">T</div>
                 <div className="message-content">
                   <div className="message-sender">Textly</div>
-                  <div className="message-text">Hey there, scroll down to see more about Textly</div>
+                  <div className="message-text">Hey there, I'm Textly, scroll down to see more about me.</div>
                 </div>
               </div>
             </div>

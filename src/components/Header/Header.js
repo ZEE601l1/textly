@@ -23,7 +23,12 @@ const Header = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav">
         <div className="logo">
-          Textly
+          <img 
+            src="/logo.png" 
+            alt="Textly Logo" 
+            className="logo-image"
+          />
+          <span className="logo-text">Textly</span>
         </div>
         
         {/* Desktop Navigation */}
