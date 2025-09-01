@@ -59,9 +59,12 @@ const WaitlistSection = () => {
               </p>
             </div>
             
-            <button onClick={resetForm} className="reset-button">
-              Join another email
-            </button>
+            <button 
+  className="reset-button" 
+  onClick={() => window.open('https://t.me/textlyofficial', '_blank')}
+>
+  Join our community
+</button>
           </div>
         </div>
       </section>
