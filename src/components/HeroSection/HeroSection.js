@@ -24,15 +24,24 @@ const HeroSection = () => {
             <HeroAnimation />
           </div>
           
-          <div className="cta-buttons">
-            <button className="cta-button primary">
-              <Download size={20} className="button-icon" />
-              Add to Chrome
-            </button>
-            <button className="cta-button secondary">
-              Try on Web
-            </button>
-          </div>
+  <div className="cta-buttons" >
+  
+  <button 
+  onClick={() => document.querySelector('.waitlist-section').scrollIntoView({ behavior: 'smooth' })}
+    className="cta-button primary">
+    <Download size={20} className="button-icon" />
+    <span>Add to Chrome</span>
+  </button>
+  
+
+  <button 
+    className="cta-button secondary"
+    onClick={() => document.querySelector('.waitlist-section').scrollIntoView({ behavior: 'smooth' })}
+  >
+    Try on Web
+  </button>
+</div>
+
         </div>
         
         {/* Desktop Layout */}
@@ -48,14 +57,14 @@ const HeroSection = () => {
             </p>
             
             <div className="cta-buttons">
-              <button className="cta-button primary">
+              <button className="cta-button primary" onClick={() => document.querySelector('.waitlist-section').scrollIntoView({ behavior: 'smooth' })}>
                 <Download size={20} className="button-icon" />
                 Add to Chrome
               </button>
-              <button className="cta-button secondary">
+              <button className="cta-button secondary" onClick={() => document.querySelector('.waitlist-section').scrollIntoView({ behavior: 'smooth' })}>
                 Try on Web
               </button>
-            </div>
+            </div> 
           </div>
           
           <div className="hero-animation">

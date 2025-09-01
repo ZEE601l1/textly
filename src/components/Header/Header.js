@@ -27,6 +27,7 @@ const Header = () => {
             src="/logo.png" 
             alt="Textly Logo" 
             className="logo-image"
+            onClick={() => document.querySelector('.hero-section').scrollIntoView({ behavior: 'smooth' })}
           />
           <span className="logo-text">Textly</span>
         </div>
@@ -38,9 +39,12 @@ const Header = () => {
           <a href="#faq">FAQ</a>
         </div>
         
-        <button className="cta-button desktop-only">
-          Get Started for Free
-        </button>
+<button 
+  className="cta-button desktop-only"
+  onClick={() => document.querySelector('.waitlist-section').scrollIntoView({ behavior: 'smooth' })}
+>
+  Get Started for Free
+</button>
         
         {/* Mobile Hamburger Menu */}
         <button 
@@ -59,9 +63,18 @@ const Header = () => {
           <a href="#features" onClick={toggleMobileMenu}>Features</a>
           <a href="#how-it-works" onClick={toggleMobileMenu}>How it Works</a>
           <a href="#faq" onClick={toggleMobileMenu}>FAQ</a>
-          <button className="cta-button mobile-cta">
-            Get Started for Free
-          </button>
+<button
+  className="cta-button mobile-cta"
+  onClick={() => {
+    console.log("Button clicked ✅");
+    const section = document.querySelector('.waitlist-section');
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+    toggleMobileMenu();
+  }}
+>
+  Get Started for Free
+</button>
+
         </div>
       </div>
     </header>
