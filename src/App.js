@@ -9,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import FloatingElements from './components/FloatingElements/FloatingElements';
 import CustomCursor from './components/CustomCursor/CustomCursor';
 import './App.css';
+import WaitlistSection from './components/WaitlistSection/WaitlistSection';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <HeroSection />
       <FeaturesSection />
       <HowItWorks />
+      <WaitlistSection />
       <FAQSection />
       <Footer />
     </div>

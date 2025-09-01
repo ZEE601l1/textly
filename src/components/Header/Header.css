@@ -26,12 +26,35 @@
 }
 
 .logo {
-  font-size: 1.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-image {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .logo-image {
+  height: 28px;
+  width: 28px;
+}
+
+.logo-text {
   font-weight: bold;
-  background: linear-gradient(to right, #2563eb, #7c3aed);
+  background-color: #111827;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-size: 30px;
+  transition: font-size 0.3s ease;
+}
+
+.header.scrolled .logo-text {
+  font-size: 26px;
 }
 
 .desktop-nav {
@@ -72,16 +95,14 @@
   padding: 0.4rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
-  height: 1.5rem;
+  height: 2.2em;
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
 }
 
 .cta-button:hover {
-  
   transform: translateY(-2px);
-  
 }
 
 .mobile-menu-toggle {
@@ -190,7 +211,7 @@
 
 @media (max-width: 767px) {
   .desktop-only {
-    display: none !important; /* Added !important to ensure it's hidden */
+    display: none !important;
   }
   
   .header {
@@ -199,5 +220,23 @@
   
   .header.scrolled {
     padding: 0.5rem 1.5rem;
+  }
+  
+  .logo-text {
+    font-size: 26px;
+  }
+  
+  .header.scrolled .logo-text {
+    font-size: 22px;
+  }
+  
+  .logo-image {
+    height: 28px;
+    width: 28px;
+  }
+  
+  .header.scrolled .logo-image {
+    height: 24px;
+    width: 24px;
   }
 }

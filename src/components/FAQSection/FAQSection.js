@@ -14,7 +14,7 @@ const FAQSection = () => {
         <div className="faq-list">
           <FAQItem 
             question="How do I install Textly?"
-            answer="Just click 'Add to Chrome,' install it from the Chrome Web Store, and you're ready to go. It takes less than 30 seconds and works immediately."
+            answer="For now, we're still in devolopment phase but when we launch V1 all you have to do is click 'Add to Chrome,' install it from the Chrome Web Store, and you're ready to go. It takes less than 30 seconds and works immediately."
           />
           <FAQItem 
             question="Does Textly work on Mac?"
@@ -22,11 +22,11 @@ const FAQSection = () => {
           />
           <FAQItem 
             question="Will there be a mobile version?"
-            answer="Yes, Textly will be available as a mobile keyboard app soon. Sign up to be notified when it's ready."
+            answer="Yes, Textly will be available as a mobile keyboard app soon. Join the waitlist to be notified when it's ready."
           />
           <FAQItem 
             question="Is my data private?"
-            answer="Absolutely. We don't sell your data—your words stay yours. We use industry-standard encryption and only process text temporarily to provide corrections."
+            answer="Absolutely. We don't sell your data, your words stay yours. We use industry-standard encryption and only process text temporarily to provide corrections."
           />
           <FAQItem 
             question="Does it work offline?"

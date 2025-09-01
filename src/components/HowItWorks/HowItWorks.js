@@ -7,7 +7,7 @@ const HowItWorks = () => {
     <section id="how-it-works" className="how-it-works-section">
       <div className="how-it-works-container">
         <h2 className="section-title centered">
-          How It Works
+          How Textly Works
         </h2>
         
         <div className="steps-grid">
