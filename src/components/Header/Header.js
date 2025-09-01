@@ -29,7 +29,7 @@ const Header = () => {
             className="logo-image"
             onClick={() => document.querySelector('.hero-section').scrollIntoView({ behavior: 'smooth' })}
           />
-          <span className="logo-text">Textly</span>
+          <span className="logo-text" onClick={() => document.querySelector('.hero-section').scrollIntoView({ behavior: 'smooth' })}>Textly</span>
         </div>
         
         {/* Desktop Navigation */}
